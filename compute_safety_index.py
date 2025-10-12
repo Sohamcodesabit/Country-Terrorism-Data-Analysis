@@ -124,7 +124,7 @@ def main():
     output.coalesce(1).write.mode('overwrite').option('header', True).csv(OUTPUT_PATH)
     output.limit(TOPK).coalesce(1).write.mode('overwrite').option('header', True).csv(f"{OUTPUT_PATH}/top{TOPK}")
 
-    print(f"\n✅ Safety Index calculation complete!\nResults saved to: {OUTPUT_PATH}\n")
+    print(f"\n Safety Index calculation complete!\nResults saved to: {OUTPUT_PATH}\n")
 
     spark.stop()
 
